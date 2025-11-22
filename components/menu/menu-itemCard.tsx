@@ -15,7 +15,7 @@ export const MenuItemCard: React.FC<Props> = ({ item }) => {
           {item.name}
         </h3>
         <div className="text-lg font-black text-[var(--color-red)] whitespace-nowrap">
-          {isNumericPrice ? item.price.toFixed(0) : item.price}
+          {typeof item.price === 'number' ? item.price.toFixed(0) : item.price}
           {isNumericPrice && (
             <span className="text-xs font-normal ml-0.5 text-[color:#9ca3af]">MYR</span>
           )}

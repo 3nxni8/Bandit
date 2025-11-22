@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { User, Mail, Phone, Flower2, Diamond } from 'lucide-react';
 import { FormInput } from '@/components/reservation/formInput';
