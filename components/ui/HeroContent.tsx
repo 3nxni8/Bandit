@@ -1,6 +1,6 @@
 import type { ComponentType, SVGProps } from "react";
 import { Instagram, Facebook, Twitter } from "lucide-react";
-import CircleButton from "./circleButton";
+import CircleButton from "./CircleButton";
 
 const SocialLink = ({
   Icon,

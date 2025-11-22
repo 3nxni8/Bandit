@@ -1,5 +1,5 @@
 import { Flower2, ArrowRight } from "lucide-react";
-import ImageCollage from "./imagecollage";
+import ImageCollage from "./ImageCollage";
 import Link from "next/link";
 
 const AboutSection = () => {

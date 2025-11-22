@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { User, Mail, Phone, Flower2, Diamond } from 'lucide-react';
-import { FormInput } from '@/components/reservation/formInput';
-import { FormSelect } from '@/components/reservation/formSelect';
+import { FormInput } from '@/components/reservation/FormInput';
+import { FormSelect } from '@/components/reservation/FormSelect';
 import { FormTextarea } from '@/components/reservation/FormTextarea';
 
 // Mock data for dropdowns

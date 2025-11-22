@@ -1,6 +1,6 @@
 import React from 'react';
 import { menuData } from '@/data/menuData';
-import { MenuSection } from '@/components/menu/menu-section';
+import { MenuSection } from '@/components/menu/MenuSection';
 
 const MenuPage = () => {
   return (
