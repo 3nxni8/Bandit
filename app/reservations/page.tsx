@@ -30,19 +30,19 @@ const ReservationPage: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#162A2A] text-stone-100 flex flex-col items-center justify-center py-16 px-4">
+        <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center py-16 px-4">
 
             {/* --- Header --- */}
             <div className="text-center mb-12">
                 {/* Using Flower2 as a placeholder for the abstract icon */}
-                <Flower2 className="mx-auto text-stone-400 mb-4 w-12 h-12 opacity-50" strokeWidth={1} />
-                <h1 className="text-4xl md:text-5xl font-serif text-white tracking-wide">
+                <Flower2 className="mx-auto text-muted-foreground mb-4 w-12 h-12 opacity-50" strokeWidth={1} />
+                <h1 className="text-4xl md:text-5xl font-serif text-[var(--color-red)] tracking-wide">
                     Reservation form
                 </h1>
             </div>
 
             {/* --- Form Container --- */}
-            <form onSubmit={handleSubmit} className="w-full max-w-4xl bg-[#1a3333]/50 p-8 md:p-12 rounded-lg border border-[#2A4F4F] space-y-8">
+            <form onSubmit={handleSubmit} className="w-full max-w-4xl bg-card/50 p-8 md:p-12 rounded-lg border border-border space-y-8">
 
                 {/* Row 1: Event Name */}
                 <div className="w-full">
@@ -77,15 +77,15 @@ const ReservationPage: React.FC = () => {
 
             {/* --- Submit Button --- */}
             <div className="mt-12">
-                <button className="bg-[#A3886D] hover:bg-[#8F765C] text-white py-3 px-8 rounded-sm flex items-center gap-3 transition-all duration-300 uppercase tracking-widest text-sm font-bold">
-                    <Diamond size={10} className="text-stone-200" fill="currentColor" />
+                <button className="bg-[var(--color-red)] hover:bg-[var(--color-red)]/90 text-white py-3 px-8 rounded-sm flex items-center gap-3 transition-all duration-300 uppercase tracking-widest text-sm font-bold">
+                    <Diamond size={10} className="text-white" fill="currentColor" />
                     Book Appointment
-                    <Diamond size={10} className="text-stone-200" fill="currentColor" />
+                    <Diamond size={10} className="text-white" fill="currentColor" />
                 </button>
             </div>
 
             {/* --- Framer Badge (Optional based on image) --- */}
-            <div className="fixed bottom-4 right-4 bg-white text-black px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-2">
+            <div className="fixed bottom-4 right-4 bg-white text-[var(--color-black)] px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
                 Made in Framer
             </div>
