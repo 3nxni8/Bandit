@@ -19,7 +19,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-full bg-white text-black border-b" role="banner">
+    <header className="w-full bg-[var(--color-white)] text-[var(--color-black)] border-b border-[var(--border)]" role="banner">
       {/* Top Utility Row - hidden on small screens, visible md+ */}
       <div className="hidden md:block">
         <UtilityBar />
@@ -33,7 +33,7 @@ const Header = () => {
           aria-controls="primary-navigation"
           aria-expanded={isMobileNavOpen}
           onClick={() => setIsMobileNavOpen((prev) => !prev)}
-          className="p-2 rounded border border-black/20 hover:bg-black/5 active:scale-95 transition"
+          className="p-2 rounded border border-[var(--border)] hover:bg-[var(--color-black)] hover:text-[var(--color-white)] active:scale-95 transition"
           type="button"
         >
           <Menu className="h-5 w-5" />
@@ -52,7 +52,7 @@ const Header = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="hover:text-[#C5A059] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#C5A059]"
+                className="hover:text-[var(--color-red)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-red)]"
               >
                 {item.label}
               </Link>
@@ -66,14 +66,14 @@ const Header = () => {
         <nav
           id="primary-navigation"
           aria-label="Mobile Primary"
-          className="md:hidden border-b border-black/5 bg-white"
+          className="md:hidden border-b border-[var(--border)] bg-[var(--color-white)]"
         >
           <div className="px-4 py-3 flex flex-col gap-3 text-sm tracking-[0.2em] uppercase">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="hover:text-[#C5A059] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#C5A059]"
+                className="hover:text-[var(--color-red)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-red)]"
                 onClick={() => setIsMobileNavOpen(false)}
               >
                 {item.label}

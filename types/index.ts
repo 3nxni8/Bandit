@@ -10,4 +10,18 @@ export interface ServiceItem {
     icon: React.ElementType;
 }
 
+export interface MenuItem {
+    name: string;
+    description: string;
+    price: number;
+    tags?: string[];
+}
+
+export interface MenuCategory {
+    id: number;
+    title: string;
+    icon: React.ReactNode;
+    items: MenuItem[];
+}
+
 export {};
