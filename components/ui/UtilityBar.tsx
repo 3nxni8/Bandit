@@ -29,8 +29,6 @@ export function UtilityBar() {
           </div>
         </div>
 
-        {/* Spacer for center logo */}
-        <div className="hidden md:block w-[160px] shrink-0" />
 
         {/* Right Section: Phone and Address */}
         <div className="flex-1 flex flex-col md:flex-row items-end justify-end gap-2">
@@ -58,10 +56,6 @@ export function UtilityBar() {
           <div className="w-full border-t border-[var(--color-black)]" />
         </div>
 
-        {/* Center logo */}
-        <div>
-          <Logo />
-        </div>
 
         {/* Right line */}
         <div className="flex-1 flex items-center">

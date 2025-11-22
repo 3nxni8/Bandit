@@ -11,7 +11,7 @@ const marqueeItems = [
 
 export const Marquee: React.FC = () => {
     return (
-        <div className="w-full bg-[#0f2222] border-y border-[#2A4F4F] py-6 overflow-hidden relative">
+        <div className="w-full bg-[#FAF9F6 py-6 overflow-hidden relative">
             {/* Inline style for the custom animation */}
             <style>
                 {`
@@ -29,7 +29,7 @@ export const Marquee: React.FC = () => {
                 {/* Render items twice to create seamless loop */}
                 {[...marqueeItems, ...marqueeItems].map((item, idx) => (
                     <div key={idx} className="flex items-center mx-8">
-                        <span className="text-3xl md:text-5xl font-serif text-stone-100 mr-6">
+                        <span className="text-3xl md:text-5xl font-serif #ef4444 mr-6">
                             {item.text}
                         </span>
                         <div className="relative w-12 h-12 md:w-16 md:h-16">

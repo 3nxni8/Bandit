@@ -1,10 +1,13 @@
 "use client";
 
 import React from 'react';
-import { User, Mail, Phone, Flower2, Diamond } from 'lucide-react';
+import { User, Mail, Phone, Diamond } from 'lucide-react';
 import { FormInput } from '@/components/reservation/FormInput';
 import { FormSelect } from '@/components/reservation/FormSelect';
 import { FormTextarea } from '@/components/reservation/FormTextarea';
+import {Marquee} from "@/components/ui/Marquee";
+import {InfoSection} from "@/components/ui/infoSection";
+import { Banner } from '@/components/ui/Banner';
 
 // Mock data for dropdowns
 const peopleOptions = [
@@ -30,68 +33,70 @@ const ReservationPage: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center py-16 px-4">
+        <>
+            <Banner
+                title="Reserve Your Spot"
+                subtitle="Book your table for an unforgettable dining experience."
+            />
 
-            {/* --- Header --- */}
-            <div className="text-center mb-12">
-                {/* Using Flower2 as a placeholder for the abstract icon */}
-                <Flower2 className="mx-auto text-muted-foreground mb-4 w-12 h-12 opacity-50" strokeWidth={1} />
-                <h1 className="text-4xl md:text-5xl font-serif text-[var(--color-red)] tracking-wide">
-                    Reservation form
-                </h1>
+            <div className="min-h-screen w-full bg-background text-foreground flex flex-col items-center justify-center py-12 md:py-16 px-4 sm:px-6 md:px-8">
+
+                {/* --- Form Container --- */}
+                <form onSubmit={handleSubmit} className="w-full max-w-7xl bg-card/50 p-6 sm:p-8 md:p-12 rounded-lg border border-border space-y-6 md:space-y-8">
+
+                    {/* Row 1: Event Name */}
+                    <div className="w-full">
+                        <FormInput label="Event name" placeholder="e.g., Birthday Dinner, Game Night" />
+                    </div>
+
+                    {/* Row 2: Three Columns (People, Date, Time) */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                        <FormSelect label="Number of people" options={peopleOptions} placeholder="Select..." />
+
+                        {/* Using type="date" for native picker, styled to blend in */}
+                        <FormInput
+                            label="DD/MM/YYYY"
+                            type="date"
+                            className="[&::-webkit-calendar-picker-indicator]:opacity-50 [&::-webkit-calendar-picker-indicator]:invert"
+                        />
+                        <FormSelect label="Time" options={timeOptions} placeholder="Select time..." />
+                    </div>
+
+                    {/* Row 3: Three Columns with Icons (Name, Email, Phone) */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                        <FormInput label="Your name" placeholder="John Doe" icon={User} />
+                        <FormInput label="Email address" type="email" placeholder="john@example.com" icon={Mail} />
+                        <FormInput label="Phone number" type="tel" placeholder="+1 234 567 890" icon={Phone} />
+                    </div>
+
+                    {/* Row 4: Textarea */}
+                    <div className="w-full">
+                        <FormTextarea label="Tell us more about event (Optional)" placeholder="Any special requests, allergies, or details about your game night?" />
+                    </div>
+
+                    {/* --- Submit Button --- */}
+                    <div className="flex justify-center pt-4">
+                        <button type="submit" className="bg-[var(--color-red)] hover:bg-[var(--color-red)]/90 text-white py-3 px-6 md:px-8 rounded-sm flex items-center gap-3 transition-all duration-300 uppercase tracking-widest text-xs md:text-sm font-bold">
+                            <Diamond size={10} className="text-white" fill="currentColor" />
+                            Book Appointment
+                            <Diamond size={10} className="text-white" fill="currentColor" />
+                        </button>
+                    </div>
+                </form>
+
+                {/* --- Framer Badge (Optional based on image) --- */}
+                <div className="fixed bottom-4 right-4 bg-white text-[var(--color-black)] px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                    Made in Framer
+                </div>
+
             </div>
 
-            {/* --- Form Container --- */}
-            <form onSubmit={handleSubmit} className="w-full max-w-4xl bg-card/50 p-8 md:p-12 rounded-lg border border-border space-y-8">
-
-                {/* Row 1: Event Name */}
-                <div className="w-full">
-                    <FormInput label="Event name" placeholder="e.g., Birthday Dinner, Game Night" />
-                </div>
-
-                {/* Row 2: Three Columns (People, Date, Time) */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <FormSelect label="Number of people" options={peopleOptions} placeholder="Select..." />
-
-                    {/* Using type="date" for native picker, styled to blend in */}
-                    <FormInput
-                        label="DD/MM/YYYY"
-                        type="date"
-                        className="[&::-webkit-calendar-picker-indicator]:opacity-50 [&::-webkit-calendar-picker-indicator]:invert"
-                    />
-                    <FormSelect label="Time" options={timeOptions} placeholder="Select time..." />
-                </div>
-
-                {/* Row 3: Three Columns with Icons (Name, Email, Phone) */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <FormInput label="Your name" placeholder="John Doe" icon={User} />
-                    <FormInput label="Email address" type="email" placeholder="john@example.com" icon={Mail} />
-                    <FormInput label="Phone number" type="tel" placeholder="+1 234 567 890" icon={Phone} />
-                </div>
-
-                {/* Row 4: Textarea */}
-                <div className="w-full">
-                    <FormTextarea label="Tell us more about event (Optional)" placeholder="Any special requests, allergies, or details about your game night?" />
-                </div>
-            </form>
-
-            {/* --- Submit Button --- */}
-            <div className="mt-12">
-                <button className="bg-[var(--color-red)] hover:bg-[var(--color-red)]/90 text-white py-3 px-8 rounded-sm flex items-center gap-3 transition-all duration-300 uppercase tracking-widest text-sm font-bold">
-                    <Diamond size={10} className="text-white" fill="currentColor" />
-                    Book Appointment
-                    <Diamond size={10} className="text-white" fill="currentColor" />
-                </button>
-            </div>
-
-            {/* --- Framer Badge (Optional based on image) --- */}
-            <div className="fixed bottom-4 right-4 bg-white text-[var(--color-black)] px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-                Made in Framer
-            </div>
-
-        </div>
-    );
+            <Marquee />
+            <Marquee />
+            <InfoSection />
+        </>
+    )
 };
 
 export default ReservationPage;

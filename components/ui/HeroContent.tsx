@@ -35,7 +35,7 @@ const HeroContent = () => {
         <div className="relative mb-8">
           <h1
             id="hero-heading"
-            className="font-serif text-[15vw] md:text-8xl lg:text-[7rem] xl:text-[8rem] leading-[0.9] text-[var(--color-black)] tracking-tighter relative z-10"
+            className="font-serif text-[15vw] md:text-8xl lg:text-[7rem] xl:text-[8rem] leading-[0.9] text-[var(--color-red)] tracking-tighter relative z-10"
           >
             LaExotic
           </h1>
@@ -54,16 +54,7 @@ const HeroContent = () => {
           </p>
         </div>
         <CircleButton />
-        <div className="mt-16 md:mt-auto lg:absolute lg:bottom-12 lg:right-12 flex flex-col items-start lg:items-end gap-4">
-          <div className="flex gap-6" aria-label="Social media links">
-            <SocialLink Icon={Instagram} label="Instagram" />
-            <SocialLink Icon={Facebook} label="Facebook" />
-            <SocialLink Icon={Twitter} label="Twitter / X" />
-          </div>
-          <p className="text-[10px] tracking-[0.3em] uppercase font-medium opacity-40 text-[var(--color-black)]">
-            Est. MMXIV  Paris
-          </p>
-        </div>
+
       </div>
     </div>
   );

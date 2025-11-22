@@ -1,14 +1,17 @@
+import {Banner} from "@/components/ui/Banner";
+import {InstagramFeed} from "@/components/ui/InstagramFeed";
+
 const ContactPage = () => {
   return (
-    <main className="py-12">
-      <h1 className="text-3xl font-bold mb-4">Contact</h1>
-      <p className="text-sm text-gray-600 max-w-xl">
-        Reach out for private events, catering, or general inquiries.
-      </p>
-    </main>
+   <main>
+       <Banner
+         title="Get in Touch"
+         subtitle="We'd love to hear from you"
+       />
+
+       <InstagramFeed/>
+   </main>
   );
 };
 
 export default ContactPage;
-
-

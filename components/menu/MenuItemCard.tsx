@@ -1,36 +1,75 @@
 import React from 'react';
-import type { MenuItem } from '../../data/menuData';
+import Image from 'next/image';
+import { MenuItem } from '../../data/menuData';
 
 interface Props {
-  item: MenuItem;
+    item: MenuItem;
 }
 
 export const MenuItemCard: React.FC<Props> = ({ item }) => {
-  const isNumericPrice = typeof item.price === 'number';
+    const isNumericPrice = typeof item.price === 'number';
 
-  return (
-    <div className="group relative bg-background p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-      <div className="flex justify-between items-start mb-2">
-        <h3 className="text-xl font-bold text-foreground group-hover:text-[var(--color-red)] transition-colors pr-4">
-          {item.name}
-        </h3>
-        <div className="text-lg font-black text-[var(--color-red)] whitespace-nowrap">
-          {typeof item.price === 'number' ? item.price.toFixed(0) : item.price}
-          {isNumericPrice && (
-            <span className="text-xs font-normal ml-0.5 text-muted-foreground">MYR</span>
-          )}
+    return (
+        <div className="group flex items-start gap-4 md:gap-6 w-full">
+
+            {/* Image Section: Only renders if your data has images.
+          Added a placeholder 'bg' in case image is missing to maintain layout structure */}
+            <div className="w-20 h-20 md:w-24 md:h-24 shrink-0 overflow-hidden rounded-sm bg-[var(--border)]/20">
+                {item.image && (
+                    <Image
+                        src={item.image}
+                        alt={item.name}
+                        width={96}
+                        height={96}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                )}
+            </div>
+
+            {/* Content Section */}
+            <div className="flex-1 flex flex-col pt-1 min-w-0">
+
+                {/* Title + Dotted Line + Price */}
+                <div className="flex items-end justify-between w-full mb-2">
+
+                    {/* Title */}
+                    <h3 className="text-lg md:text-xl font-bold text-foreground group-hover:text-[var(--color-red)] transition-colors truncate pr-2">
+                        {item.name}
+                    </h3>
+
+                    {/* The Dotted Leader Line (Using your border variable) */}
+                    <div className="flex-1 mx-2 border-b-2 border-dotted border-[var(--border)] mb-[6px] opacity-50" />
+
+                    {/* Price */}
+                    <div className="text-lg md:text-xl font-black text-[var(--color-red)] whitespace-nowrap leading-none">
+                        {isNumericPrice ? (
+                            <>
+                                {/* You can remove 'RM' if you want just the number like the screenshot */}
+                                <span className="text-sm font-normal mr-1 text-muted-foreground">MYR</span>
+                                {(item.price as number).toFixed(0)}
+                            </>
+                        ) : (
+                            item.price
+                        )}
+                    </div>
+                </div>
+
+                {/* Description */}
+                {item.description && (
+                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                        {item.description}
+                    </p>
+                )}
+
+                {/* Tag (Positioned inline or relative to maintain flow) */}
+                {item.tag && (
+                    <div className="mt-2">
+             <span className="inline-block bg-[var(--color-red)] text-white text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-wider">
+              {item.tag}
+            </span>
+                    </div>
+                )}
+            </div>
         </div>
-      </div>
-
-      {item.description && (
-        <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-      )}
-
-      {item.tag && (
-        <span className="absolute -top-3 -right-2 bg-[var(--color-red)] text-white text-xs font-black px-2 py-1 rounded shadow-sm transform rotate-3 border border-[var(--color-red)]">
-          {item.tag}
-        </span>
-      )}
-    </div>
-  );
+    );
 };

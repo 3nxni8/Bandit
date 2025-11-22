@@ -41,11 +41,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${plusJakartaSans.variable} ${bebasNeue.variable} antialiased`}>
-        <div className="mx-auto  sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
