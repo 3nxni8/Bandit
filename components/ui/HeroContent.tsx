@@ -1,6 +1,6 @@
 import type { ComponentType, SVGProps } from "react";
 import { Instagram, Facebook, Twitter } from "lucide-react";
-import CircleButton from "./circleButton";
+import CircleButton from "./CircleButton";
 
 const SocialLink = ({
   Icon,
@@ -48,7 +48,7 @@ const HeroContent = () => {
           </h2>
         </div>
         <div className="mt-12 md:mt-16 max-w-md border-l border-[var(--border)] pl-6 ml-2">
-          <p className="text-[color:#4b5563] text-base md:text-lg font-light leading-relaxed">
+          <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
             Truly exotic and appetizing cuisine for those special moments in life. We strip away the noise to focus on pure,
             unadulterated flavor.
           </p>

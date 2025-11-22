@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { UtilityBar } from "../ui/utility-bar";
-import { Logo } from "../ui/logo";
+import { UtilityBar } from "../ui/UtilityBar";
+import { Logo } from "../ui/Logo";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import type { NavItem } from "@/types";

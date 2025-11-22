@@ -1,6 +1,6 @@
 import React from 'react';
 import { MenuCategory } from '../../data/menuData';
-import { MenuItemCard } from './menu-itemCard';
+import { MenuItemCard } from './MenuItemCard';
 
 interface Props {
   category: MenuCategory;

@@ -4,14 +4,16 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
-  Design tokens – core palette (red / white / black)
-  Use these custom properties instead of hard-coded hex values
+  Design tokens – Terracotta Theme
+  Primary: Terracotta/Salmon (#E27D60)
+  Background: Off-White (#FAF9F6)
+  Text: Dark Charcoal (#333333)
 */
 :root {
-  /* Brand palette */
-  --color-white: #ffffff;
-  --color-black: #050509;
-  --color-red: #e11b22;
+  /* Brand palette - Terracotta Theme */
+  --color-white: #FAF9F6;
+  --color-black: #333333;
+  --color-red: #E27D60;
   --color-gold: #c5a059;
 
   /* Typography */
@@ -34,20 +36,20 @@
   --primary: var(--color-black);
   --primary-foreground: var(--color-white);
 
-  --secondary: #f4f4f5;
+  --secondary: #F5F1ED;
   --secondary-foreground: var(--color-black);
 
-  --muted: #f4f4f5;
-  --muted-foreground: #4b5563;
+  --muted: #F5F1ED;
+  --muted-foreground: #666666;
 
-  --accent: #f4f4f5;
+  --accent: #F5F1ED;
   --accent-foreground: var(--color-black);
 
   --destructive: var(--color-red);
 
-  --border: #e5e7eb;
-  --input: #e5e7eb;
-  --ring: #9ca3af;
+  --border: #E5DDD5;
+  --input: #E5DDD5;
+  --ring: #E27D60;
 
   /* Charts (kept but aligned to palette where possible) */
   --chart-1: #ef4444;
@@ -61,39 +63,39 @@
   --sidebar-foreground: var(--color-black);
   --sidebar-primary: var(--color-black);
   --sidebar-primary-foreground: var(--color-white);
-  --sidebar-accent: #f4f4f5;
+  --sidebar-accent: #F5F1ED;
   --sidebar-accent-foreground: var(--color-black);
-  --sidebar-border: #e5e7eb;
-  --sidebar-ring: #9ca3af;
+  --sidebar-border: #E5DDD5;
+  --sidebar-ring: #E27D60;
 }
 
 .dark {
-  --background: #020617;
-  --foreground: #f9fafb;
+  --background: #1a1614;
+  --foreground: #FAF9F6;
 
-  --card: #020617;
-  --card-foreground: #f9fafb;
+  --card: #1a1614;
+  --card-foreground: #FAF9F6;
 
-  --popover: #020617;
-  --popover-foreground: #f9fafb;
+  --popover: #1a1614;
+  --popover-foreground: #FAF9F6;
 
-  --primary: #f9fafb;
-  --primary-foreground: #020617;
+  --primary: #FAF9F6;
+  --primary-foreground: #1a1614;
 
-  --secondary: #111827;
-  --secondary-foreground: #f9fafb;
+  --secondary: #2a2421;
+  --secondary-foreground: #FAF9F6;
 
-  --muted: #111827;
-  --muted-foreground: #9ca3af;
+  --muted: #2a2421;
+  --muted-foreground: #999999;
 
-  --accent: #111827;
-  --accent-foreground: #f9fafb;
+  --accent: #2a2421;
+  --accent-foreground: #FAF9F6;
 
-  --destructive: #b91c1c;
+  --destructive: #E27D60;
 
-  --border: #1f2937;
-  --input: #1f2937;
-  --ring: #4b5563;
+  --border: #3a342f;
+  --input: #3a342f;
+  --ring: #E27D60;
 
   --chart-1: #f97316;
   --chart-2: #22c55e;
@@ -101,14 +103,14 @@
   --chart-4: #6366f1;
   --chart-5: #ec4899;
 
-  --sidebar: #020617;
-  --sidebar-foreground: #f9fafb;
-  --sidebar-primary: #f9fafb;
-  --sidebar-primary-foreground: #020617;
-  --sidebar-accent: #111827;
-  --sidebar-accent-foreground: #f9fafb;
-  --sidebar-border: #1f2937;
-  --sidebar-ring: #4b5563;
+  --sidebar: #1a1614;
+  --sidebar-foreground: #FAF9F6;
+  --sidebar-primary: #FAF9F6;
+  --sidebar-primary-foreground: #1a1614;
+  --sidebar-accent: #2a2421;
+  --sidebar-accent-foreground: #FAF9F6;
+  --sidebar-border: #3a342f;
+  --sidebar-ring: #E27D60;
 }
 
 @theme inline {
