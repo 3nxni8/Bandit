@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface FormSelectProps {
+interface FormSelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
     label: string;
     options: { value: string; label: string }[];
     placeholder?: string;
