@@ -18,7 +18,7 @@ export const NavBar = () => {
   ];
 
   return (
-    <header className="w-full bg-[var(--color-white)] text-[var(--color-black)] b]" role="banner">
+    <header className="w-full bg-[var(--color-white)] text-[var(--color-black)]" role="banner">
       {/* Desktop Navigation */}
       <div className="hidden lg:block">
         <div className="container mx-auto px-6 py-4">

@@ -1,20 +1,44 @@
+"use client";
+
 import { Flower2, ArrowRight } from "lucide-react";
 import ImageCollage from "./ImageCollage";
 import Link from "next/link";
+import { useIntersectionObserver } from "@/lib/useIntersectionObserver";
 
 const AboutSection = () => {
+    const { ref, isIntersecting } = useIntersectionObserver({ 
+        threshold: 0.2,
+        triggerOnce: true 
+    });
+
     return (
-        <section className="w-full bg-background text-foreground overflow-hidden py-12 lg:py-24">
+        <section 
+            ref={ref}
+            className="w-full bg-background text-foreground overflow-hidden py-12 lg:py-24"
+            aria-labelledby="about-heading"
+        >
             <div className="max-w-[1600px] mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
 
                     {/* Left Column: Collage */}
-                    <div className="w-full order-2 lg:order-1">
+                    <div 
+                        className={`w-full order-2 lg:order-1 transition-all duration-1000 ${
+                            isIntersecting 
+                                ? 'opacity-100 translate-x-0' 
+                                : 'opacity-0 -translate-x-12'
+                        }`}
+                    >
                         <ImageCollage />
                     </div>
 
                     {/* Right Column: Content */}
-                    <div className="w-full order-1 lg:order-2 flex">
+                    <div 
+                        className={`w-full order-1 lg:order-2 flex transition-all duration-1000 delay-200 ${
+                            isIntersecting 
+                                ? 'opacity-100 translate-x-0' 
+                                : 'opacity-0 translate-x-12'
+                        }`}
+                    >
                         <div className="flex flex-col justify-center px-6 md:px-16 lg:px-24 py-12">
 
                             {/* Decorative Icon */}
@@ -23,7 +47,7 @@ const AboutSection = () => {
                             </div>
 
                             {/* Headline */}
-                            <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 text-[var(--color-red)]">
+                            <h2 id="about-heading" className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 text-[var(--color-red)]">
                                 Around the world, <br />
                                 <span className="italic text-muted-foreground">one plate at a time</span>
                             </h2>
