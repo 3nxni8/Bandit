@@ -4,17 +4,20 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
-  Design tokens – Terracotta Theme
-  Primary: Terracotta/Salmon (#E27D60)
-  Background: Off-White (#FAF9F6)
-  Text: Dark Charcoal (#333333)
+  Design tokens – High-Contrast Theme
+  Primary: Red (#ef4444)
+  Background: Red (#ef4444)
+  Text: White (#FAF9F6)
+  Accents: Gold (#c5a059)
 */
 :root {
-  /* Brand palette - Terracotta Theme */
+  /* Brand palette - High-Contrast Theme */
   --color-white: #FAF9F6;
   --color-black: #333333;
   --color-red: #ef4444;
+  --color-red-dark: #dc2626;
   --color-gold: #c5a059;
+  --color-gray-light: #E5E5E5;
 
   /* Typography */
   --font-plus-jakarta-sans: ui-sans-serif;
@@ -36,13 +39,13 @@
   --primary: var(--color-white);
   --primary-foreground: var(--color-red);
 
-  --secondary: #dc2626;
+  --secondary: var(--color-red-dark);
   --secondary-foreground: var(--color-white);
 
-  --muted: #dc2626;
-  --muted-foreground: #E5E5E5;
+  --muted: var(--color-red-dark);
+  --muted-foreground: var(--color-gray-light);
 
-  --accent: #dc2626;
+  --accent: var(--color-red-dark);
   --accent-foreground: var(--color-white);
 
   --destructive: var(--color-red);
@@ -63,7 +66,7 @@
   --sidebar-foreground: var(--color-white);
   --sidebar-primary: var(--color-white);
   --sidebar-primary-foreground: var(--color-red);
-  --sidebar-accent: #dc2626;
+  --sidebar-accent: var(--color-red-dark);
   --sidebar-accent-foreground: var(--color-white);
   --sidebar-border: var(--color-gold);
   --sidebar-ring: var(--color-gold);
