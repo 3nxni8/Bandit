@@ -200,8 +200,7 @@
   button:hover,
   button:focus,
   button:focus-visible {
-    background-color: var(--color-black);
-    color: var(--color-white);
+    color: var(--color-black);
     border-color: var(--color-gold);
   }
 
