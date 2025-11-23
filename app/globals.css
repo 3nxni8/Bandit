@@ -4,13 +4,13 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
-  Design tokens – Terracotta Theme
-  Primary: Terracotta/Salmon (#E27D60)
-  Background: Off-White (#FAF9F6)
-  Text: Dark Charcoal (#333333)
+  Design tokens – High-Contrast Theme
+  Background: Red (#ef4444)
+  Text: White (#FAF9F6)
+  Accents/Borders: Gold (#c5a059)
 */
 :root {
-  /* Brand palette - Terracotta Theme */
+  /* Brand palette - High-Contrast Theme */
   --color-white: #FAF9F6;
   --color-black: #333333;
   --color-red: #ef4444;
@@ -24,49 +24,49 @@
   --radius: 0.625rem;
 
   /* System (light) */
-  --background: var(--color-white);
-  --foreground: var(--color-black);
+  --background: var(--color-red);
+  --foreground: var(--color-white);
 
-  --card: var(--color-white);
-  --card-foreground: var(--color-black);
+  --card: var(--color-red);
+  --card-foreground: var(--color-white);
 
-  --popover: var(--color-white);
-  --popover-foreground: var(--color-black);
+  --popover: var(--color-red);
+  --popover-foreground: var(--color-white);
 
-  --primary: var(--color-black);
-  --primary-foreground: var(--color-white);
+  --primary: var(--color-white);
+  --primary-foreground: var(--color-red);
 
-  --secondary: #F5F1ED;
-  --secondary-foreground: var(--color-black);
+  --secondary: var(--color-gold);
+  --secondary-foreground: var(--color-white);
 
-  --muted: #F5F1ED;
-  --muted-foreground: #666666;
+  --muted: var(--color-gold);
+  --muted-foreground: var(--color-white);
 
-  --accent: #F5F1ED;
-  --accent-foreground: var(--color-black);
+  --accent: var(--color-gold);
+  --accent-foreground: var(--color-white);
 
-  --destructive: var(--color-red);
+  --destructive: var(--color-black);
 
-  --border: #E5DDD5;
-  --input: #E5DDD5;
-  --ring: #E27D60;
+  --border: var(--color-gold);
+  --input: var(--color-gold);
+  --ring: var(--color-gold);
 
   /* Charts (kept but aligned to palette where possible) */
-  --chart-1: #ef4444;
-  --chart-2: #fb923c;
-  --chart-3: #facc15;
-  --chart-4: #22c55e;
-  --chart-5: #0ea5e9;
+  --chart-1: #fb923c;
+  --chart-2: #facc15;
+  --chart-3: #22c55e;
+  --chart-4: #0ea5e9;
+  --chart-5: #c5a059;
 
   /* Sidebar */
-  --sidebar: var(--color-white);
-  --sidebar-foreground: var(--color-black);
-  --sidebar-primary: var(--color-black);
-  --sidebar-primary-foreground: var(--color-white);
-  --sidebar-accent: #F5F1ED;
-  --sidebar-accent-foreground: var(--color-black);
-  --sidebar-border: #E5DDD5;
-  --sidebar-ring: #E27D60;
+  --sidebar: var(--color-red);
+  --sidebar-foreground: var(--color-white);
+  --sidebar-primary: var(--color-white);
+  --sidebar-primary-foreground: var(--color-red);
+  --sidebar-accent: var(--color-gold);
+  --sidebar-accent-foreground: var(--color-white);
+  --sidebar-border: var(--color-gold);
+  --sidebar-ring: var(--color-gold);
 }
 
 .dark {
