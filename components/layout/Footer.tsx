@@ -22,7 +22,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full bg-[var(--color-black)] text-[var(--color-white)] border-t border-[var(--border)]">
+    <footer className="w-full bg-[var(--color-red)] text-[var(--color-white)]]">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">

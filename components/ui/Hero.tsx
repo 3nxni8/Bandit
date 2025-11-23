@@ -4,11 +4,11 @@ import HeroContent from "./HeroContent";
 const Hero = () => {
   return (
     <section
-      className="relative w-full min-h-screen bg-[var(--color-white)] flex flex-col lg:flex-row overflow-hidden"
+      className="relative w-full min-h-screen bg-[var(--color-white)] flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:gap-12 overflow-hidden"
       aria-label="Hero section"
     >
-      <HeroImage />
       <HeroContent />
+      <HeroImage />
     </section>
   );
 };
