@@ -45,18 +45,18 @@
   --accent: var(--color-gold);
   --accent-foreground: var(--color-white);
 
-  --destructive: var(--color-red);
+  --destructive: var(--color-black);
 
   --border: var(--color-gold);
   --input: var(--color-gold);
   --ring: var(--color-gold);
 
   /* Charts (kept but aligned to palette where possible) */
-  --chart-1: #ef4444;
-  --chart-2: #fb923c;
-  --chart-3: #facc15;
-  --chart-4: #22c55e;
-  --chart-5: #0ea5e9;
+  --chart-1: #fb923c;
+  --chart-2: #facc15;
+  --chart-3: #22c55e;
+  --chart-4: #0ea5e9;
+  --chart-5: #c5a059;
 
   /* Sidebar */
   --sidebar: var(--color-red);
