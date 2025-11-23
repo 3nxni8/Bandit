@@ -1,6 +1,5 @@
 import { Clock, Phone, MapPin, Diamond } from "lucide-react";
 import { FaInstagram, FaXTwitter, FaFacebook } from "react-icons/fa6";
-import { Logo } from "./Logo";
 
 export function UtilityBar() {
   return (

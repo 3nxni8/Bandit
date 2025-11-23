@@ -1,24 +1,4 @@
-import type { ComponentType, SVGProps } from "react";
-import { Instagram, Facebook, Twitter } from "lucide-react";
 import CircleButton from "./CircleButton";
-
-const SocialLink = ({
-  Icon,
-  href = "#",
-  label,
-}: {
-  Icon: ComponentType<SVGProps<SVGSVGElement>>;
-  href?: string;
-  label?: string;
-}) => (
-  <a
-    href={href}
-    aria-label={label}
-    className="p-2 rounded-full border border-[var(--border)] hover:bg-[var(--color-black)] hover:text-[var(--color-white)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-black)]"
-  >
-    <Icon className="w-5 h-5" />
-  </a>
-);
 
 const HeroContent = () => {
   return (
