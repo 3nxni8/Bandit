@@ -2,9 +2,9 @@ import React from 'react';
 import { Info } from 'lucide-react';
 
 export const StorySection: React.FC = () => (
-    <section className="bg-background py-8 px-6 border-b border-border">
+    <section className="bg-[-var(--color-gold)]  py-8 px-6 border-b border-border">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-6 items-center">
-            <div className="bg-[var(--color-red)]/10 p-3 rounded-full text-[var(--color-red)] flex-shrink-0">
+            <div className="bg-[var(--color-red)]/10 p-3 rounded-full text-[var(--color-gold)] flex-shrink-0">
                 <Info size={24} />
             </div>
             <div className="text-center md:text-left">

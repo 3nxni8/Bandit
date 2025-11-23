@@ -25,14 +25,14 @@ const MenuPage = () => {
                     <p className="text-xs md:text-sm uppercase tracking-[0.3em] text-muted-foreground mb-3">
                         Our Menu
                     </p>
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-[var(--color-red)]">
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight text-[var(--color-black)]">
                         Crafted Plates &amp; Bold Brews
                     </h1>
                     <p className="mt-4 max-w-2xl mx-auto text-sm md:text-base lg:text-lg text-muted-foreground px-4">
                         From big breakfast stacks to crafted brews, everything on this menu is built for conversations that run a little too late.
                     </p>
 
-                    <div className="mt-8">
+                    <div className=" w- full mt-8">
                         <Marquee />
                         <Marquee />
                     </div>
@@ -49,8 +49,8 @@ const MenuPage = () => {
                                     className={`
                     text-xl md:text-2xl font-black uppercase tracking-wide transition-all duration-300
                     ${isActive
-                                        ? 'text-[var(--color-red)] scale-105' // Active State
-                                        : 'text-[var(--border)] hover:text-[var(--color-black)]/60' // Inactive State
+                                        ? 'text-[var(--color-balck)] scale-105' // Active State
+                                        : 'text-[var(--border)] hover:text-[var(--color-gold)]/60' // Inactive State
                                     }
                   `}
                                 >

@@ -18,7 +18,7 @@ export const NavBar = () => {
   ];
 
   return (
-    <header className="w-full bg-[var(--color-white)] text-[var(--color-black)]" role="banner">
+    <header className="w-full bg-[var(--color-red)] text-[var(--color-white)]" role="banner">
       {/* Desktop Navigation */}
       <div className="hidden lg:block">
         <div className="container mx-auto px-6 py-4">
@@ -37,7 +37,7 @@ export const NavBar = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="hover:text-[var(--color-red)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-red)]"
+                  className="hover:text-[var(--color-black)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-red)]"
                 >
                   {item.label}
                 </Link>
@@ -48,7 +48,7 @@ export const NavBar = () => {
             <div className="flex-shrink-0">
               <Link
                 href="/reservations"
-                className="px-6 py-3 bg-[var(--color-red)] text-[var(--color-white)] text-xs tracking-[0.2em] uppercase font-semibold hover:bg-[var(--color-red)]/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-red)]"
+                className="px-6 py-3 bg-[var(--color-gold)] text-[var(--color-white)] text-xs tracking-[0.2em] uppercase font-semibold hover:bg-[var(--color-red)]/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-red)]"
               >
                 Get Table
               </Link>
@@ -66,7 +66,7 @@ export const NavBar = () => {
             aria-controls="mobile-navigation"
             aria-expanded={isMobileNavOpen}
             onClick={() => setIsMobileNavOpen((prev) => !prev)}
-            className="p-2 rounded border border-[var(--border)] hover:bg-[var(--color-black)] hover:text-[var(--color-white)] active:scale-95 transition"
+            className="p-2 rounded border border-[var(--color-white)] hover:bg-[var(--color-white)] hover:text-[var(--color-white)] active:scale-95 transition"
             type="button"
           >
             {isMobileNavOpen ? (
@@ -89,7 +89,7 @@ export const NavBar = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="hover:text-[var(--color-red)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-red)]"
+                  className="hover:text-[var(--color-black)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-red)]"
                   onClick={() => setIsMobileNavOpen(false)}
                 >
                   {item.label}
@@ -97,7 +97,7 @@ export const NavBar = () => {
               ))}
               <Link
                 href="/reservations"
-                className="mt-2 px-6 py-3 bg-[var(--color-red)] text-[var(--color-white)] text-center text-xs tracking-[0.2em] uppercase font-semibold hover:bg-[var(--color-red)]/90 transition-colors"
+                className="mt-2 px-6 py-3 bg-[var(--color-black)] text-[var(--color-white)] text-center text-xs tracking-[0.2em] uppercase font-semibold hover:bg-[var(--color-red)]/90 transition-colors"
                 onClick={() => setIsMobileNavOpen(false)}
               >
                 Get Table

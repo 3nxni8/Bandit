@@ -8,7 +8,7 @@ const CircleButton = () => {
                 href="/menu"
                 prefetch={false}
                 aria-label="View our menus"
-                className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border border-black flex items-center justify-center overflow-hidden bg-transparent transition-transform duration-500 ease-out group-hover:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black"
+                className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border border-gold flex items-center justify-center overflow-hidden bg-transparent transition-transform duration-500 ease-out group-hover:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black"
             >
 
                 {/* Fill Animation Layer */}

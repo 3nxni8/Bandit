@@ -52,10 +52,10 @@ const ServicesSection = () => {
                         : 'opacity-0 translate-y-8'
                 }`}>
                     <div className="flex flex-col items-center gap-4 mb-6">
-                        <div className="h-12 w-[1px] bg-[var(--color-red)]" />
+                        <div className="h-12 w-[1px] bg-[var(--color-gold)]" />
                         <span className="uppercase tracking-[0.3em] text-xs font-medium text-muted-foreground">Our Expertise</span>
                     </div>
-                    <h2 id="services-heading" className="font-serif text-5xl md:text-6xl lg:text-7xl leading-none text-[var(--color-red)]">
+                    <h2 id="services-heading" className="font-serif text-5xl md:text-6xl lg:text-7xl leading-none text-[var(--color-gold)]">
                         We provide elegant
                         <span className="block italic text-muted-foreground mt-2">service for people</span>
                     </h2>

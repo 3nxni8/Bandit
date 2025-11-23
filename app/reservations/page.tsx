@@ -76,19 +76,13 @@ const ReservationPage: React.FC = () => {
 
                     {/* --- Submit Button --- */}
                     <div className="flex justify-center pt-4">
-                        <button type="submit" className="bg-[var(--color-red)] hover:bg-[var(--color-red)]/90 text-white py-3 px-6 md:px-8 rounded-sm flex items-center gap-3 transition-all duration-300 uppercase tracking-widest text-xs md:text-sm font-bold">
-                            <Diamond size={10} className="text-white" fill="currentColor" />
+                        <button type="submit" className="bg-[var(--color-gold)] hover:bg-[var(--color-black)]/90 text-white py-3 px-6 md:px-8 rounded-sm flex items-center gap-3 transition-all duration-300 uppercase tracking-widest text-xs md:text-sm font-bold">
                             Book Appointment
-                            <Diamond size={10} className="text-white" fill="currentColor" />
+
                         </button>
                     </div>
                 </form>
 
-                {/* --- Framer Badge (Optional based on image) --- */}
-                <div className="fixed bottom-4 right-4 bg-white text-[var(--color-black)] px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-                    Made in Framer
-                </div>
 
             </div>
 

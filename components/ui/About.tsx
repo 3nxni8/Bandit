@@ -47,20 +47,18 @@ const AboutSection = () => {
                             </div>
 
                             {/* Headline */}
-                            <h2 id="about-heading" className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 text-[var(--color-red)]">
+                            <h2 id="about-heading" className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 text-[var(--color-gold)]">
                                 Around the world, <br />
                                 <span className="italic text-muted-foreground">one plate at a time</span>
                             </h2>
 
                             {/* Description */}
                             <p className="font-sans text-muted-foreground leading-relaxed mb-10 max-w-md text-lg font-light">
-                                Welcome to <strong className="text-foreground font-medium">La.Revi</strong>, one of the best restaurants in the country.
-                                This is the place where food meets passion and where the world&rsquo;s finest chefs are creating culinary masterpieces
-                                stripped of color, but full of life.
+                                Good food, great competition, and friendly chaos. Whether you're here for the bragging rights or the buttermilk chicken, may the best bandit win.
                             </p>
 
                             {/* Opening Hours */}
-                            <div className="mb-12 space-y-4 border-l-2 border-[var(--color-red)] pl-6">
+                            <div className="mb-12 space-y-4 border-l-2 border-[var(--color-gold)] pl-6">
                                 <h3 className="font-serif text-2xl mb-4 flex items-center gap-3">
                                     Opening Hours
                                 </h3>
@@ -77,10 +75,10 @@ const AboutSection = () => {
                             {/* CTA Button */}
                             <Link
                                 href="/reservations"
-                                className="group w-fit relative px-8 py-4 bg-transparent border border-[var(--color-red)] overflow-hidden transition-all hover:border-[var(--color-red)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-red)]"
+                                className="group w-fit relative px-8 py-4  border border-[var(--color-gold)] overflow-hidden transition-all hover:border-[var(--color-black)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-gold)]"
                             >
-                                <div className="absolute inset-0 w-0 bg-[var(--color-red)] transition-all duration-[250ms] ease-out group-hover:w-full" />
-                                <span className="relative text-[var(--color-red)] group-hover:text-white font-medium tracking-widest uppercase text-xs flex items-center gap-3">
+                                <div className="absolute inset-0 w-0 bg-[var(--color-gold)] transition-all duration-[250ms] ease-out group-hover:w-full" />
+                                <span className="relative text-[var(--color-white)] group-hover:text-gold font-medium tracking-widest uppercase text-xs flex items-center gap-3">
                                     Find A Table
                                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                                 </span>

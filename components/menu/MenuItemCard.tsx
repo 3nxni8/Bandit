@@ -33,7 +33,7 @@ export const MenuItemCard: React.FC<Props> = ({ item }) => {
                 <div className="flex items-end justify-between w-full mb-2">
 
                     {/* Title */}
-                    <h3 className="text-lg md:text-xl font-bold text-foreground group-hover:text-[var(--color-red)] transition-colors truncate pr-2">
+                    <h3 className="text-lg md:text-xl font-bold text-foreground group-hover:text-[var(--color-white)] transition-colors truncate pr-2">
                         {item.name}
                     </h3>
 
@@ -41,7 +41,7 @@ export const MenuItemCard: React.FC<Props> = ({ item }) => {
                     <div className="flex-1 mx-2 border-b-2 border-dotted border-[var(--border)] mb-[6px] opacity-50" />
 
                     {/* Price */}
-                    <div className="text-lg md:text-xl font-black text-[var(--color-red)] whitespace-nowrap leading-none">
+                    <div className="text-lg md:text-xl font-black text-[var(--color-white)] whitespace-nowrap leading-none">
                         {isNumericPrice ? (
                             <>
                                 {/* You can remove 'RM' if you want just the number like the screenshot */}
@@ -64,7 +64,7 @@ export const MenuItemCard: React.FC<Props> = ({ item }) => {
                 {/* Tag (Positioned inline or relative to maintain flow) */}
                 {item.tag && (
                     <div className="mt-2">
-             <span className="inline-block bg-[var(--color-red)] text-white text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-wider">
+             <span className="inline-block bg-[var(--color-gold)] text-white text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-wider">
               {item.tag}
             </span>
                     </div>

@@ -4,16 +4,19 @@ const HeroImage = () => {
     return (
         <div className="w-full lg:w-1/2 h-[60vh] lg:h-screen relative overflow-hidden group">
             {/* Background image - positioned to keep subject visible on large screens */}
-            <div className="w-full h-full relative">
-                <Image
-                    src="/images/hero.png"
-                    alt="Artisan Croissant"
-                    fill
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    className="object-cover object-center lg:object-right transition-transform duration-700 ease-out group-hover:scale-105"
-                    style={{ willChange: 'transform' }}
-                    priority
-                />
+            <div className="w-full h-full relative flex items-center justify-center">
+                {/* Circular image container - responsive sizes */}
+                <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] lg:w-[520px] lg:h-[520px] rounded-full overflow-hidden shadow-2xl">
+                    <Image
+                        src="/images/hero.png"
+                        alt="Artisan Croissant"
+                        fill
+                        sizes="(min-width: 1024px) 50vw, 100vw"
+                        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                        style={{ willChange: 'transform' }}
+                        priority
+                    />
+                </div>
             </div>
 
             {/* Subtle left gradient to give the content area breathing room */}
@@ -23,8 +26,8 @@ const HeroImage = () => {
             />
 
             {/* Floating Review Badge - kept subtle and only visible on md+ */}
-            <div className="absolute bottom-12 left-12 hidden md:block">
-                <div className="bg-white/90 backdrop-blur-sm p-5 border-l-2 border-black/5 shadow-xl max-w-xs">
+            <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 hidden md:block">
+                <div className="bg-white/90 backdrop-blur-sm p-5 border-l-2 border-black/5 shadow-xl max-w-xs rounded-lg">
                     <p className="font-serif italic text-lg text-black leading-snug">
                         &ldquo;A symphony of textures that redefines pastry.&rdquo;
                     </p>

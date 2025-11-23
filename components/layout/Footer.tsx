@@ -22,14 +22,15 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full bg-[var(--color-red)] text-[var(--color-white)]]">
+    // Footer: red background, white text, hover -> black, borders gold
+    <footer className="w-full bg-[var(--color-red)] text-[var(--color-white)]">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
 
           {/* Brand Section */}
           <div className="space-y-4">
-            <div className="invert">
+            <div className="">
               <Logo />
             </div>
             <p className="text-sm text-[var(--color-white)]/70 leading-relaxed max-w-xs">
@@ -39,7 +40,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-bold tracking-[0.2em] uppercase mb-4 text-[var(--color-red)]">
+            <h3 className="text-sm font-bold tracking-[0.2em] uppercase mb-4 text-[var(--color-white)]">
               Quick Links
             </h3>
             <nav className="flex flex-col gap-2">
@@ -47,7 +48,7 @@ const Footer = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-[var(--color-white)]/70 hover:text-[var(--color-red)] transition-colors"
+                  className="text-sm text-[var(--color-white)]/70 hover:text-[var(--color-black)] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -57,20 +58,20 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-sm font-bold tracking-[0.2em] uppercase mb-4 text-[var(--color-red)]">
+            <h3 className="text-sm font-bold tracking-[0.2em] uppercase mb-4 text-[var(--color-white)]">
               Contact
             </h3>
             <div className="flex flex-col gap-3">
               <a
                 href="tel:+1234567890"
-                className="flex items-center gap-2 text-sm text-[var(--color-white)]/70 hover:text-[var(--color-red)] transition-colors group"
+                className="flex items-center gap-2 text-sm text-[var(--color-white)]/70 hover:text-[var(--color-black)] transition-colors"
               >
                 <Phone className="h-4 w-4 flex-shrink-0" />
                 <span>(123) 456-7890</span>
               </a>
               <a
                 href="mailto:info@boardroombandit.com"
-                className="flex items-center gap-2 text-sm text-[var(--color-white)]/70 hover:text-[var(--color-red)] transition-colors group"
+                className="flex items-center gap-2 text-sm text-[var(--color-white)]/70 hover:text-[var(--color-black)] transition-colors"
               >
                 <Mail className="h-4 w-4 flex-shrink-0" />
                 <span>info@boardroombandit.com</span>
@@ -84,7 +85,7 @@ const Footer = () => {
 
           {/* Hours & Social */}
           <div>
-            <h3 className="text-sm font-bold tracking-[0.2em] uppercase mb-4 text-[var(--color-red)]">
+            <h3 className="text-sm font-bold tracking-[0.2em] uppercase mb-4 text-[var(--color-white)]">
               Hours
             </h3>
             <div className="text-sm text-[var(--color-white)]/70 space-y-1 mb-6">
@@ -93,7 +94,7 @@ const Footer = () => {
               <p>Sunday: 4PM - 9PM</p>
             </div>
 
-            <h3 className="text-sm font-bold tracking-[0.2em] uppercase mb-4 text-[var(--color-red)]">
+            <h3 className="text-sm font-bold tracking-[0.2em] uppercase mb-4 text-[var(--color-white)]">
               Follow Us
             </h3>
             <div className="flex gap-4">
@@ -102,7 +103,7 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="p-2 border border-[var(--color-white)]/20 rounded hover:border-[var(--color-red)] hover:text-[var(--color-red)] transition-colors"
+                  className="p-2 border border-[var(--color-gold)]/40 rounded text-[var(--color-white)]/90 hover:border-[var(--color-gold)] hover:text-[var(--color-black)] transition-colors"
                 >
                   <social.icon className="h-4 w-4" />
                 </a>
@@ -113,15 +114,15 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-[var(--color-white)]/10">
+      <div className="border-t border-[var(--color-gold)]/20">
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[var(--color-white)]/50">
             <p>&copy; {currentYear} Boardroom Bandit. All rights reserved.</p>
             <div className="flex gap-6">
-              <Link href="#" className="hover:text-[var(--color-red)] transition-colors">
+              <Link href="#" className="hover:text-[var(--color-black)] transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="hover:text-[var(--color-red)] transition-colors">
+              <Link href="#" className="hover:text-[var(--color-black)] transition-colors">
                 Terms of Service
               </Link>
             </div>

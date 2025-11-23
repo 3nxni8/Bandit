@@ -14,7 +14,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ item, isLast }) => {
       {/* Icon Container */}
       <div className="mb-8 relative">
         <div className="w-16 h-16 rounded-full border border-border flex items-center justify-center transition-all duration-500 group-hover:border-white/30 group-hover:scale-110">
-          <item.icon strokeWidth={1} className="w-7 h-7 text-foreground transition-colors duration-500 group-hover:text-white" />
+          <item.icon strokeWidth={1} className="w-7 h-7 text-foreground transition-colors duration-500 group-hover:text-gold" />
         </div>
       </div>
 
