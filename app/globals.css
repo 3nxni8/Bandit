@@ -4,13 +4,13 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
-  Design tokens – Terracotta Theme
-  Primary: Terracotta/Salmon (#E27D60)
-  Background: Off-White (#FAF9F6)
-  Text: Dark Charcoal (#333333)
+  Design tokens – High-Contrast Theme
+  Background: Red (#ef4444)
+  Text: White (#FAF9F6)
+  Accents/Borders: Gold (#c5a059)
 */
 :root {
-  /* Brand palette - Terracotta Theme */
+  /* Brand palette - High-Contrast Theme */
   --color-white: #FAF9F6;
   --color-black: #333333;
   --color-red: #ef4444;
