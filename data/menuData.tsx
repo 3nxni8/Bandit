@@ -137,7 +137,7 @@ export const menuData: MenuCategory[] = [
 
 export const BANNER_DATA = {
     locations: {
-        subtitle: "La.Revi",
+        subtitle: " BOARDROOM BANDIT",
         title: "Locations"
     },
     about: {
@@ -146,10 +146,10 @@ export const BANNER_DATA = {
     },
     menu: {
         subtitle: "Menus",
-        title: "Of La.Revi"
+        title: "Of Our Dishes"
     },
     reservation: {
         subtitle: "Reservation",
-        title: "You Need Before Come"
+        title: "You WELCOME"
     }
 };

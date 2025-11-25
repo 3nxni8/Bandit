@@ -48,8 +48,8 @@ const AboutSection = () => {
 
                             {/* Headline */}
                             <h2 id="about-heading" className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 text-[var(--color-gold)]">
-                                Around the world, <br />
-                                <span className="italic text-muted-foreground">one plate at a time</span>
+                                Eat. Play. Repeat. <br />
+
                             </h2>
 
                             {/* Description */}

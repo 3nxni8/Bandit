@@ -82,7 +82,7 @@ export const NavBar = () => {
           <nav
             id="mobile-navigation"
             aria-label="Mobile Primary"
-            className="border-t border-[var(--border)] bg-[var(--color-white)]"
+            className="border-t border-[var(--border)] bg-[var(--color-red)]"
           >
             <div className="px-4 py-3 flex flex-col gap-3 text-sm tracking-[0.2em] uppercase">
               {navItems.map((item) => (

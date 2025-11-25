@@ -34,7 +34,7 @@ const Footer = () => {
               <Logo />
             </div>
             <p className="text-sm text-[var(--color-white)]/70 leading-relaxed max-w-xs">
-              Experience exceptional dining in the heart of the city. Where culinary artistry meets sophisticated ambiance.
+                Eat. Play. Repeat.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-2 text-sm text-[var(--color-white)]/70">
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
-                <span>123 Main Street<br />New York, NY 10001</span>
+                <span>Evolve mall ara damansara <br />Selangor,Malaysia</span>
               </div>
             </div>
           </div>

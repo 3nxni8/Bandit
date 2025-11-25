@@ -4,26 +4,26 @@ import type { ServiceItem } from "@/types";
 export const services: ServiceItem[] = [
     {
         id: 1,
-        title: "Fine Dining",
-        description: "Where culinary artistry meets passion, creating flavors that define sophistication.",
+        title: "Board Game Café",
+        description: "Enjoy a vast selection of board games while savoring our gourmet food and drinks.",
         icon: Utensils,
     },
     {
         id: 2,
-        title: "Great Bar",
-        description: "Experience mixology that shapes the world, one perfectly crafted cocktail at a time.",
+        title: "Handcrafted Mocktails.",
+        description: "Savor our expertly crafted mocktails, blending fresh ingredients for a delightful experience.",
         icon: Martini,
     },
     {
         id: 3,
-        title: "Ice Cream Bar",
-        description: "A nostalgic yet modern journey through global flavors and artisanal sweet treats.",
+        title: "Creative Desserts.",
+        description: "Indulge in our imaginative dessert creations that turn sweet dreams into reality.",
         icon: IceCream,
     },
     {
         id: 4,
-        title: "Quality Service",
-        description: "Impeccable attention to detail where world-class hospitality meets comfort.",
+        title: "Cozy, Fun & Competitive",
+        description: " Experience a warm and inviting atmosphere perfect for friendly competition and memorable moments.",
         icon: ChefHat,
     },
 ];

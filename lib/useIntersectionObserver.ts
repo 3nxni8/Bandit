@@ -11,12 +11,12 @@ interface UseIntersectionObserverOptions {
  * @param options - Configuration options for IntersectionObserver
  * @returns ref to attach to element and isIntersecting boolean
  */
-export const useIntersectionObserver = ({
+export const useIntersectionObserver = <T extends HTMLElement = HTMLDivElement>({
   threshold = 0.1,
   rootMargin = '0px',
   triggerOnce = true,
 }: UseIntersectionObserverOptions = {}) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<T | null>(null);
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
 
@@ -27,7 +27,7 @@ export const useIntersectionObserver = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         const isElementIntersecting = entry.isIntersecting;
-        
+
         if (triggerOnce) {
           if (isElementIntersecting && !hasTriggered) {
             setIsIntersecting(true);

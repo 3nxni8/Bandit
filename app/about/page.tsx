@@ -3,6 +3,7 @@ import { StorySection } from "@/components/ui/StorySection";
 import ServicesSection from "@/components/ui/Service";
 import {Banner} from "@/components/ui/Banner";
 import {InstagramFeed} from "@/components/ui/InstagramFeed";
+import GamesSection from "@/components/ui/GamesSection";
 
 const AboutPage = () => {
   return (
@@ -11,6 +12,7 @@ const AboutPage = () => {
             title={"About Us"}
             subtitle={"Learn more about our journey and values"} />
       <AboutSection />
+      <GamesSection />
       <StorySection />
       <InstagramFeed />
       <ServicesSection />

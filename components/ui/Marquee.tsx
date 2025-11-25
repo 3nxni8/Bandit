@@ -2,11 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 
 const marqueeItems = [
-    { text: "Paksi Borito", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=100&h=100&fit=crop" },
-    { text: "Mint Logan", img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=100&h=100&fit=crop" },
-    { text: "LaEspresso", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=100&h=100&fit=crop"  },
+    { text: "Salted Egg Chicken Bowl", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=100&h=100&fit=crop" },
+    { text: "Mad Spicy Sambal", img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=100&h=100&fit=crop" },
+    { text: "Scoop Stack Waffles", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=100&h=100&fit=crop"  },
     { text: "Blue Moon Meat", img:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=100&h=100&fit=crop"  },
-    { text: "Maragarito", img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=100&h=100&fit=crop" },
+    { text: "Loaded Nacho Stack", img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=100&h=100&fit=crop" },
 ];
 
 export const Marquee: React.FC = () => {
