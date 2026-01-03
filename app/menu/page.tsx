@@ -32,7 +32,7 @@ const MenuPage = () => {
                         From big breakfast stacks to crafted brews, everything on this menu is built for conversations that run a little too late.
                     </p>
 
-                    <div className=" w- full mt-8">
+                    <div className="w-full mt-8">
                         <Marquee />
                         <Marquee />
                     </div>
@@ -49,7 +49,7 @@ const MenuPage = () => {
                                     className={`
                     text-xl md:text-2xl font-black uppercase tracking-wide transition-all duration-300
                     ${isActive
-                                        ? 'text-[var(--color-balck)] scale-105' // Active State
+                                        ? 'text-[var(--color-black)] scale-105' // Active State
                                         : 'text-[var(--border)] hover:text-[var(--color-gold)]/60' // Inactive State
                                     }
                   `}

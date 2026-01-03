@@ -11,8 +11,7 @@ const HomePage = () => {
       <AboutSection />
       <ServicesSection />
       <Marquee />
-      <Marquee/>
-      <InstagramFeed/>
+      <InstagramFeed />
 
     </>
   );
