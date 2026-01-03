@@ -25,11 +25,25 @@ const timeOptions = [
 ];
 
 const ReservationPage: React.FC = () => {
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
+    const [submitMessage, setSubmitMessage] = React.useState<{type: 'success' | 'error', text: string} | null>(null);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("Reservation submitted (Not implemented yet)");
-        alert("Reservation form submitted!");
+        setIsSubmitting(true);
+        setSubmitMessage(null);
+        
+        // Simulate form submission
+        setTimeout(() => {
+            setIsSubmitting(false);
+            setSubmitMessage({
+                type: 'success',
+                text: 'Thank you! Your reservation request has been received. We will contact you shortly to confirm.'
+            });
+            
+            // Clear message after 5 seconds
+            setTimeout(() => setSubmitMessage(null), 5000);
+        }, 1000);
     };
 
     return (
@@ -74,11 +88,28 @@ const ReservationPage: React.FC = () => {
                         <FormTextarea label="Tell us more about event (Optional)" placeholder="Any special requests, allergies, or details about your game night?" />
                     </div>
 
+                    {/* Success/Error Message */}
+                    {submitMessage && (
+                        <div 
+                            className={`p-4 rounded-md ${
+                                submitMessage.type === 'success' 
+                                    ? 'bg-green-50 border border-green-200 text-green-800' 
+                                    : 'bg-red-50 border border-red-200 text-red-800'
+                            }`}
+                            role="alert"
+                        >
+                            <p className="text-sm font-medium">{submitMessage.text}</p>
+                        </div>
+                    )}
+
                     {/* --- Submit Button --- */}
                     <div className="flex justify-center pt-4">
-                        <button type="submit" className="bg-[var(--color-gold)] hover:bg-[var(--color-black)]/90 text-white py-3 px-6 md:px-8 rounded-sm flex items-center gap-3 transition-all duration-300 uppercase tracking-widest text-xs md:text-sm font-bold">
-                            Book Appointment
-
+                        <button 
+                            type="submit" 
+                            disabled={isSubmitting}
+                            className="bg-[var(--color-gold)] hover:bg-[var(--color-black)]/90 text-white py-3 px-6 md:px-8 rounded-sm flex items-center gap-3 transition-all duration-300 uppercase tracking-widest text-xs md:text-sm font-bold disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            {isSubmitting ? 'Submitting...' : 'Book Appointment'}
                         </button>
                     </div>
                 </form>
